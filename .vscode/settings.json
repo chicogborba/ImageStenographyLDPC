@@ -64,10 +64,14 @@
     "bitset": "c",
     "array": "c",
     "span": "c",
-    "vector": "c"
+    "vector": "c",
+    "stddef.h": "c",
+    "image.h": "c"
   },
   "cSpell.words": [
     "BITMAPFILEHEADER",
-    "BITMAPINFOHEADER"
-  ]
+    "BITMAPINFOHEADER",
+    "HEADERSIZE"
+  ],
+  "cSpell.language": "en,pt-BR"
 }
