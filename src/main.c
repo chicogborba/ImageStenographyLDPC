@@ -3,9 +3,12 @@
 #include <string.h>
 #include "noisy.h"
 #include "image.h"
+#include "stenography.h"
 
 #define FILENAME "./images/img.bmp"  
-#define CHANCE_TO_FLIP 30
+#define CHANCE_TO_FLIP 1
+
+const char* ENCODEDSTR = "Minha_senha_genial@18072003";
 
 int main() {
     size_t length;
@@ -22,6 +25,9 @@ int main() {
         freeImage(img);
         exit(1);
     }
+
+    encodeString(img, ENCODEDSTR);
+
 
     unsigned char* imgPixelData = pixelArrayToDataArray(img->RGB_data, (length - HEADERSIZE) / 3);
     if (!imgPixelData) {
@@ -63,7 +69,11 @@ int main() {
     createImage(noisyImage, length, "./images/noisy.bmp");
     createImage(originalImage, length, "./images/not-noisy.bmp");
 
+    char* decodedStr = decodeString(noisyImage);
+
     printf("Dados perdidos: %.2f%%\n", dataLossPercentage);
+    printf("String original: %s\n", ENCODEDSTR);
+    printf("String decodificada: %s\n", decodedStr);
 
     freeImage(img);
     freeImage(originalImage);
