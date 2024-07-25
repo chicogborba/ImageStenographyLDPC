@@ -27,3 +27,10 @@ O LDPC é um tipo de código de correção de erros que é utilizado para detect
    ```bash
    git clone https://github.com/seuusuario/ImageStegoLDPC.git
    cd ImageStegoLDPC
+
+
+## Fontes
+https://en.wikipedia.org/wiki/Hamming(7,4)
+https://michaeldipperstein.github.io/hamming.html
+https://github.com/michaeldipperstein/hamming
+

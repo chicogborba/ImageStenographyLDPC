@@ -6,9 +6,9 @@
 #include "stenography.h"
 
 #define FILENAME "./images/img.bmp"  
-#define CHANCE_TO_FLIP 1
+#define CHANCE_TO_FLIP 5
 
-const char* ENCODEDSTR = "Minha_senha_genial@18072003";
+const char* ENCODEDSTR = "Um bom texto de exemplo para ser codificado";
 
 int main() {
     size_t length;

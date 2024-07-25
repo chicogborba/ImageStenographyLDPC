@@ -3,6 +3,7 @@
 #include <time.h>
 #include <string.h> 
 #include "noisy.h"
+#include "image.h"
 
 unsigned char flipBit(unsigned char byte, int position) {
     return byte ^ (1 << position);
@@ -11,9 +12,8 @@ unsigned char flipBit(unsigned char byte, int position) {
 void noisyChannel(int chanceToFlip, unsigned char* data, size_t length) {
     srand(time(NULL)); 
 
-    size_t headerSize = 138; 
-    unsigned char* pixelData = data + headerSize;
-    size_t pixelDataLength = length - headerSize;
+    unsigned char* pixelData = data + HEADERSIZE;
+    size_t pixelDataLength = length - HEADERSIZE;
 
     for (size_t i = 0; i < pixelDataLength; i++) {
         for (int bit = 0; bit < 8; bit++) {
