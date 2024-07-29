@@ -3,8 +3,8 @@
 
 #include <stddef.h>
 
-void noisyChannel(int chanceToFlip, unsigned char* data, size_t length);
-void printBinary(unsigned char* data, size_t length);
-double calculateDataLoss(unsigned char* original, unsigned char* noisy, size_t length);
+void noisyChannel(double chanceToFlip, unsigned char *data, size_t length);
+void printBinary(unsigned char *data, size_t length);
+double calculateDataLoss(unsigned char *original, unsigned char *noisy, size_t length);
 
 #endif
